@@ -12,7 +12,7 @@ time.sleep(3)
 
 # Finding the search bar and entering text
 # search_bar = driver.find_element_by_id("id","twotabsearchtextbox") old syntax
-search_bar = driver.find_element("id", "twotabsearchtextbox")
+search_bar = driver.find_element("id","twotabsearchtextbox")
 search_bar.send_keys("laptop")
 
 # Submitting the search query
@@ -25,7 +25,7 @@ time.sleep(5)
 assert "laptop" in driver.title
 
 # Selecting a laptop from the search results
-laptop_link = driver.find_element("xpath", "/html/body/div[1]/div[2]/div[1]/div[1]/div/span[1]/div[1]/div[3]/div/div/div/div/div/div/div[1]/span/a/div/img" )
+laptop_link = driver.find_element("xpath","/html/body/div[1]/div[2]/div[1]/div[1]/div/span[1]/div[1]/div[3]/div/div/div/div/div/div/div[2]/span/a/div/img")
 # laptop_link = driver.find_element("By.CSS_SELECTOR","span[data-component-type='s-product-image'] a")
 laptop_link.click()
 
@@ -34,7 +34,7 @@ laptop_link.click()
 time.sleep(5)
 
 # Adding the laptop to the cart
-add_to_cart_button = driver.find_element("id", "add-to-cart-button")
+add_to_cart_button = driver.find_element("id","add-to-cart-button")
 add_to_cart_button.click()
 
 # Waiting for the cart to update
